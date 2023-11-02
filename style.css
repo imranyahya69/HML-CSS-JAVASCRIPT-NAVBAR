@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Space+Grotesk:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
+  color: white;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #334155;
+}
+
+.logo img {
+  height: 40px;
+  border-radius: 50%;
+  filter: invert(100%);
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 40%;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+ul li a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+ul li:not(:last-child) a:hover,
+ul li a.active {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  color: #4ca8e1;
+  text-decoration-color: white;
+}
+
+.btn {
+  font-weight: 700;
+  padding: 8px 20px;
+  border: none;
+  background: #4ca8e1;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #0091ff;
+}
+
+.hamburger {
+  font-size: 30px;
+  display: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+
+  ul {
+    display: none;
+  }
+
+  ul.ham_active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    height: 320px;
+    background-color: #30363f;
+    width: 100%;
+    gap: 24px;
+  }
+}
